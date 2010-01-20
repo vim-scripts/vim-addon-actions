@@ -1,0 +1,14 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2934
+
+Press <s-FX> to map an action to the FX key where X is one of 2,3,4 ..
+This action can be
+* run last command
+* run make
+* ....
+
+Alternatively you can set an action which is run whenever you write a buffer:
+SetActionOnBufWrite
+
+This plugin can be reused by many IDE like plugins (eg my vim-addon-fcsh does so)
+
+I got two bad ratings. Would you consider sending me a note why you think it's that bad?
