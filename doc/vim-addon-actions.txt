@@ -25,3 +25,35 @@ Example usage adding an action running make: >
 
   TIP: You can use the vim-addon-backrgound-cmd to run compilations or tagging
   commands in background!
+
+
+-----------------------------------------------------------------------
+plugins supporting vim-addon-actions~
+
+3rd party plugins:
+  SingleCompile: http://www.vim.org/scripts/script.php?script_id=3115
+  vim-ruby-debugger
+
+many of my plugins:
+  vim-addon-background-cmd
+  vim-addon-fcsh
+  vim-addon-haskell
+  vim-addon-nix
+  vim-addon-sbt
+  vim-haxe
+
+-----------------------------------------------------------------------
+CUSTOMIZATION~
+
+  You can override the default mappings. This example will let you use \a to
+  assign a mapping to <c-a>: >
+  let g:vim_actions = {}
+  let g:vim_actions['bindable_keys'] = [ ['\a', '<c-a>'] ]
+<
+
+
+-----------------------------------------------------------------------
+related work:
+
+  SingleCompile : Let user compile or run a single source file conveniently
+  http://www.vim.org/scripts/script.php?script_id=3115
