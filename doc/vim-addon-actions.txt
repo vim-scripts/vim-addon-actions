@@ -6,7 +6,7 @@ HOWTO~
 
 Example usage adding an action running make: >
 
-  call actions#AddAction("run make",{'buffer':'<buffer>', 'action':'make')
+  call actions#AddAction("run make",{'buffer':'<buffer>', 'action':'make'})
 <
   more advanced example which does some lazy configuring: >
   call actions#AddAction("run make",{'buffer':'<buffer>', 'action': funcref#Function('return "make -f ".FindMakeFile()') })
@@ -16,12 +16,14 @@ Example usage adding an action running make: >
   default key assignments in plugin/actions.vim
 
   You can also use >
-  SetActionOnWrite
+  ActionOnWrite[!]
 < to run an action whenever you write a buffer. (Also see 'autowrite')
 
   If you want to run multiple commands in order return a list of strings.
   They'll be joined by "<bar>". So use exec "your command" if it doesn't support
   bang
+
+  If you use bang (add the ! to the command) the command will be run once
 
   TIP: You can use the vim-addon-backrgound-cmd to run compilations or tagging
   commands in background!
@@ -57,3 +59,7 @@ related work:
 
   SingleCompile : Let user compile or run a single source file conveniently
   http://www.vim.org/scripts/script.php?script_id=3115
+
+  Quickrun:
+  http://www.vim.org/scripts/script.php?script_id=3146
+  http://github.com/thinca/vim-quickrun/blob/master/plugin/quickrun.vim
